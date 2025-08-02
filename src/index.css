@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ITM University Platform Design System */
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    --primary: 217 91% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 55%;
+
+    --secondary: 215 25% 95%;
+    --secondary-foreground: 215 25% 15%;
+
+    --muted: 215 25% 95%;
+    --muted-foreground: 215 16% 46%;
+
+    --accent: 223 84% 85%;
+    --accent-foreground: 215 25% 15%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 90%;
+    --input: 215 25% 90%;
+    --ring: 217 91% 45%;
+
+    --radius: 0.75rem;
+
+    /* University Theme Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 45%), hsl(223 84% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(215 25% 98%));
+    --gradient-accent: linear-gradient(120deg, hsl(217 91% 95%), hsl(223 84% 90%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(217 91% 45% / 0.1);
+    --shadow-medium: 0 8px 30px hsl(217 91% 45% / 0.15);
+    --shadow-strong: 0 15px 50px hsl(217 91% 45% / 0.2);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 25% 8%;
+    --foreground: 215 25% 95%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 215 25% 95%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 215 25% 95%;
+
+    --primary: 217 91% 55%;
+    --primary-foreground: 215 25% 8%;
+    --primary-glow: 217 91% 65%;
+
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 215 25% 95%;
+
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 16% 65%;
+
+    --accent: 223 84% 25%;
+    --accent-foreground: 215 25% 95%;
+
+    --success: 142 76% 46%;
+    --success-foreground: 215 25% 8%;
+
+    --warning: 38 92% 60%;
+    --warning-foreground: 215 25% 8%;
+
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 215 25% 8%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 217 91% 55%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 35%), hsl(223 84% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(215 25% 10%), hsl(215 25% 12%));
+    --gradient-accent: linear-gradient(120deg, hsl(217 91% 15%), hsl(223 84% 20%));
+
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 8px 30px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 15px 50px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom utility classes */
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-strong {
+    box-shadow: var(--shadow-strong);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
